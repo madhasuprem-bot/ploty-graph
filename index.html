@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Dataset Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📊 Sample Dataset Visualizer</h1>
+            <p>Interactive charts using HTML, CSS, JavaScript &amp; Chart.js</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Data Visualization Dashboard</h2>
+            <p>Choose a sample dataset below to explore the data through interactive charts.</p>
+        </section>
+
+        <section class="buttons">
+            <button class="active" onclick="showChart('sales', this)">Monthly Sales</button>
+            <button onclick="showChart('marks', this)">Student Marks</button>
+            <button onclick="showChart('attendance', this)">Attendance</button>
+        </section>
+
+        <section class="chart-card">
+            <div class="chart-heading">
+                <div>
+                    <h2 id="chartTitle">Monthly Sales</h2>
+                    <p id="chartDescription">Monthly sales performance for the year.</p>
+                </div>
+                <span class="badge">Chart.js</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>📈 Monthly Sales</h3>
+                <p>Displays how sales change from January to December.</p>
+            </div>
+            <div class="info-card">
+                <h3>🎓 Student Marks</h3>
+                <p>Compares marks obtained by students in different subjects.</p>
+            </div>
+            <div class="info-card">
+                <h3>✅ Attendance</h3>
+                <p>Shows the monthly attendance percentage of students.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sample Dataset Visualizer &copy; 2026 | Created with Chart.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
